@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.Donggukthon" parent="">
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TextAppearance.Head1" parent="TextAppearance.Donggukthon">
+        <item name="android:textSize">32dp</item>
+        <item name="android:fontFamily">@font/sc_dream_6_bold</item>
+    </style>
+
+    <style name="TextAppearance.SubHead" parent="TextAppearance.Donggukthon">
+        <item name="android:textSize">24dp</item>
+        <item name="android:fontFamily">@font/sc_dream_3_light</item>
+    </style>
+
+    <style name="TextAppearance.Button1" parent="TextAppearance.Donggukthon">
+        <item name="android:textSize">24dp</item>
+        <item name="android:fontFamily">@font/sc_dream_5_medium</item>
+    </style>
+
+    <style name="TextAppearance.Button2" parent="TextAppearance.Donggukthon">
+        <item name="android:textSize">24dp</item>
+        <item name="android:fontFamily">@font/sc_dream_2_extralight</item>
+    </style>
+
+    <style name="TextAppearance.Guide" parent="TextAppearance.Donggukthon">
+        <item name="android:textSize">24dp</item>
+        <item name="android:fontFamily">@font/sc_dream_4_regular</item>
+    </style>
+
+    <style name="TextAppearance.Title" parent="TextAppearance.Donggukthon">
+        <item name="android:textSize">20dp</item>
+        <item name="android:fontFamily">@font/sc_dream_4_regular</item>
+    </style>
+
+    <style name="TextAppearance.Body" parent="TextAppearance.Donggukthon">
+        <item name="android:textSize">16dp</item>
+        <item name="android:fontFamily">@font/sc_dream_2_extralight</item>
+    </style>
+
+    <style name="TextAppearance.Detail" parent="TextAppearance.Donggukthon">
+        <item name="android:textSize">12dp</item>
+        <item name="android:fontFamily">@font/sc_dream_3_light</item>
+    </style>
+
+    <style name="TextAppearance.Detail2" parent="TextAppearance.Donggukthon">
+        <item name="android:textSize">12dp</item>
+        <item name="android:fontFamily">@font/sc_dream_3_light</item>
+    </style>
+
+</resources>
