@@ -2,4 +2,27 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Main color -->
+    <color name="pink_70">#B3FF9494</color>
+    <color name="pink_100">#FF9494</color>
+    <color name="red">#914747</color>
+    <color name="red_400">#FF0000</color>
+    <color name="red_600">#681717</color>
+
+    <!-- Background color -->
+    <color name="background_100">#DC6758</color>
+    <color name="background_200">#D17467</color>
+    <color name="background_300">#DF8B7F</color>
+    <color name="background_400">#E8C4B9</color>
+
+    <!-- Gray Color -->
+    <color name="grey">#B4B4B4</color>
+    <color name="translucent">#40000000</color>
+
+    <!-- Sub Color -->
+    <color name="yellow">#FFF4BA</color>
+    <color name="yellow_200">#EFC36F</color>
+    <color name="green">#365533</color>
+
 </resources>
