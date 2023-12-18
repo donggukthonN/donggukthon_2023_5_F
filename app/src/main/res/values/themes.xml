@@ -1,0 +1,10 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Donggukthon20235F" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Theme.Donggukthon20235F" parent="Base.Theme.Donggukthon20235F" />
+</resources>
