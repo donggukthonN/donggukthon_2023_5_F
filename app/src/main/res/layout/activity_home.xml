@@ -5,6 +5,9 @@
 
     <data>
 
+        <variable
+            name="viewModel"
+            type="com.donggukthon.team5.presentation.home.HomeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -150,6 +153,7 @@
 
         <ImageView
             android:id="@+id/iv_home_light_bulb"
+            invisibility="@{viewModel.mockOrnamentOverviewList[3]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="64dp"
@@ -159,6 +163,7 @@
 
         <ImageView
             android:id="@+id/iv_home_ball1"
+            invisibility="@{viewModel.mockOrnamentOverviewList[0]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="31dp"
@@ -169,6 +174,7 @@
 
         <ImageView
             android:id="@+id/iv_home_hat"
+            invisibility="@{viewModel.mockOrnamentOverviewList[1]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
@@ -179,6 +185,7 @@
 
         <ImageView
             android:id="@+id/iv_home_ball2"
+            invisibility="@{viewModel.mockOrnamentOverviewList[2]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="9dp"
@@ -189,6 +196,7 @@
 
         <ImageView
             android:id="@+id/iv_home_ball3"
+            invisibility="@{viewModel.mockOrnamentOverviewList[4]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="36dp"
@@ -198,7 +206,8 @@
             app:layout_constraintTop_toBottomOf="@+id/iv_home_hat" />
 
         <ImageView
-            android:id="@+id/iv_home_cookie"
+            android:id="@+id/iv_tree_cookie"
+            invisibility="@{viewModel.mockOrnamentOverviewList[5]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -208,7 +217,8 @@
             app:layout_constraintTop_toBottomOf="@+id/iv_home_ball2" />
 
         <ImageView
-            android:id="@+id/iv_home_ball4"
+            android:id="@+id/iv_tree_ball4"
+            invisibility="@{viewModel.mockOrnamentOverviewList[7]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="-4dp"
@@ -219,15 +229,17 @@
 
         <ImageView
             android:id="@+id/iv_home_ball5"
+            invisibility="@{viewModel.mockOrnamentOverviewList[6]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:src="@drawable/ic_home_ball5"
             app:layout_constraintStart_toStartOf="@+id/iv_home_tree"
-            app:layout_constraintTop_toTopOf="@+id/iv_home_ball4" />
+            app:layout_constraintTop_toTopOf="@+id/iv_tree_ball4" />
 
         <ImageView
             android:id="@+id/iv_home_socks"
+            invisibility="@{viewModel.mockOrnamentOverviewList[8]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="-15dp"
@@ -238,6 +250,7 @@
 
         <ImageView
             android:id="@+id/iv_home_ball6"
+            invisibility="@{viewModel.mockOrnamentOverviewList[9]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="31dp"
@@ -248,6 +261,7 @@
 
         <ImageView
             android:id="@+id/iv_home_ball7"
+            invisibility="@{viewModel.mockOrnamentOverviewList[10]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_home_ball7"
@@ -256,6 +270,7 @@
 
         <ImageView
             android:id="@+id/iv_home_candy"
+            invisibility="@{viewModel.mockOrnamentOverviewList[11]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -265,6 +280,7 @@
 
         <ImageView
             android:id="@+id/iv_home_ball8"
+            invisibility="@{viewModel.mockOrnamentOverviewList[12]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="9dp"
@@ -275,6 +291,7 @@
 
         <ImageView
             android:id="@+id/iv_home_ball9"
+            invisibility="@{viewModel.mockOrnamentOverviewList[13]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
