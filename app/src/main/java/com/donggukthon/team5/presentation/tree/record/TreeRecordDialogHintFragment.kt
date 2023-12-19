@@ -17,6 +17,10 @@ class TreeRecordDialogHintFragment: BindingDialogFragment<FragmentTreeRecordDial
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        initMakeRecordDialog()
+    }
+
+    private fun initMakeRecordDialog() {
         binding.btnTreeRecord.setOnClickListener {
             dismiss()
             recordDialog.show(requireActivity().supportFragmentManager, DIALOG_TAG)
