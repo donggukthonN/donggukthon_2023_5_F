@@ -4,4 +4,6 @@
     <string name="dialog_tree_hint_content">즐거웠던 기억,\n간직하고 싶은 기억을\n적어보세요</string>
     <string name="dialog_tree_hint_content_small">ex)\n자고 일어났더니\n부모님이 머리맡에 선물을 두고\n출근하셨던 기억.</string>
     <string name="tree_record_hint">입력하세요(100자 내외)</string>
+    <string name="fireplace_record_content">잊고싶은 기억,\n후회되는 기억을\n적어보세요</string>
+    <string name="fireplace_record_content_hint">ex)\n자격증 시험 전 날\n유투브를 보느라 늦게 자서\n시험 시간에 늦은 것.</string>
 </resources>

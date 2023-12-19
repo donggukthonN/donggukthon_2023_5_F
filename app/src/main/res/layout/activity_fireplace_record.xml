@@ -33,6 +33,7 @@
             android:layout_marginHorizontal="95dp"
             android:src="@drawable/img_fireplace_btn"
             android:background="@android:color/transparent"
+            android:visibility="@{viewModel.btnVisible ? View.VISIBLE : View.INVISIBLE}"
             app:layout_constraintTop_toBottomOf="@id/iv_fireplace_fireplace"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
