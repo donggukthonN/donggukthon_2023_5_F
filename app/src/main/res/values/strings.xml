@@ -1,9 +1,18 @@
 <resources>
     <string name="app_name">Donggukthon-2023-5-F</string>
-    
+
     <!-- home -->
     <string name="home_room">%s님의 방</string>
     <string name="home_click">트리와 난로를 클릭해보세요.</string>
     <string name="home_tree">트리</string>
     <string name="home_stove">난로</string>
+
+    <!-- tree -->
+    <string name="tree_decorate">장식하기</string>
+    <string name="tree_previous_record"><u>이전 기록 보기</u></string>
+    
+    <!-- fire place -->
+    <string name="fire_place_not_burning_yet">아직 태우지 않은 기억이 있어요!</string>
+    <string name="fire_place_firewood">장작넣기</string>
+    <string name="fire_place_continue">계속해서 나쁜 기억을 기록하려면\n 장작넣기를 클릭하세요.</string>
 </resources>
