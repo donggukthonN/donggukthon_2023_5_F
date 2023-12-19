@@ -9,7 +9,7 @@ import com.donggukthon.team5.util.binding.BindingActivity
 
 class TreeRecordActivity : BindingActivity<ActivityTreeRecordBinding>(R.layout.activity_tree_record) {
 
-    private val viewModel by viewModels<TreeViewModel>()
+    private val viewModel by viewModels<TreeRecordViewModel>()
     private var recordDialog: TreeRecordDialogHintFragment = TreeRecordDialogHintFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {

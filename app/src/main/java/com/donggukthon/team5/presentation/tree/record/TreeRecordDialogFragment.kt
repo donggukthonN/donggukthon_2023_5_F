@@ -10,12 +10,12 @@ import android.widget.EditText
 import androidx.fragment.app.viewModels
 import com.donggukthon.team5.R
 import com.donggukthon.team5.databinding.FragmentTreeRecordDialogBinding
-import com.donggukthon.team5.presentation.tree.TreeViewModel
+import com.donggukthon.team5.presentation.tree.TreeRecordViewModel
 import com.donggukthon.team5.util.binding.BindingDialogFragment
 
 class TreeRecordDialogFragment: BindingDialogFragment<FragmentTreeRecordDialogBinding>(R.layout.fragment_tree_record_dialog) {
 
-    private val viewModel by viewModels<TreeViewModel>()
+    private val viewModel by viewModels<TreeRecordViewModel>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
