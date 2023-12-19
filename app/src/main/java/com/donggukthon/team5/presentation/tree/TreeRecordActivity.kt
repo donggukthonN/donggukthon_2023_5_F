@@ -9,20 +9,28 @@ import com.donggukthon.team5.util.binding.BindingActivity
 
 class TreeRecordActivity : BindingActivity<ActivityTreeRecordBinding>(R.layout.activity_tree_record) {
 
-    private val viewModel by viewModels<TreeRecordViewModel>()
+    private val treeViewModel by viewModels<TreeRecordViewModel>()
     private var recordDialog: TreeRecordDialogHintFragment = TreeRecordDialogHintFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding.viewModel = viewModel
 
+        binding.viewModel = treeViewModel
+
+        addListeners()
         initSetRecordDialog()
     }
 
+    private fun addListeners() {
+        binding.ivTreeHome.setOnClickListener {
+            finish()
+        }
+    }
+
     private fun initSetRecordDialog() {
-        binding.btnTreeMakeDecor.setOnClickListener {
+        binding.btnTreeDecorate.setOnClickListener {
             recordDialog.show(supportFragmentManager, DIALOG_TAG)
-            viewModel.btnVisible.value = false
+            treeViewModel.btnVisible.value = false
         }
     }
 
