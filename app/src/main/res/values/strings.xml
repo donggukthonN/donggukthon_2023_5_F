@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Donggukthon-2023-5-F</string>
+    <string name="tree_see_record"><u>이전 기록 보기</u></string>
 </resources>
