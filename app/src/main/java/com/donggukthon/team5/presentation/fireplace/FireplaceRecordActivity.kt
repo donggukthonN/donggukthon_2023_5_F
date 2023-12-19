@@ -17,6 +17,7 @@ class FireplaceRecordActivity: BindingActivity<ActivityFireplaceRecordBinding>(R
 
         binding.viewModel = viewModel
         initSetRecordDialog()
+        initSetPaperBurn()
     }
 
     private fun initSetRecordDialog() {
@@ -24,6 +25,10 @@ class FireplaceRecordActivity: BindingActivity<ActivityFireplaceRecordBinding>(R
             recordDialog.show(supportFragmentManager, DIALOG_TAG)
             viewModel.btnVisible.value = false
         }
+    }
+
+    private fun initSetPaperBurn() {
+        //
     }
 
 

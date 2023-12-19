@@ -1,6 +1,7 @@
 package com.donggukthon.team5.presentation.fireplace.record
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
@@ -10,6 +11,7 @@ import android.widget.EditText
 import androidx.fragment.app.viewModels
 import com.donggukthon.team5.R
 import com.donggukthon.team5.databinding.FragmentFireplaceRecordDialogBinding
+import com.donggukthon.team5.presentation.fireplace.FireplaceBurnActivity
 import com.donggukthon.team5.presentation.fireplace.FireplaceRecordViewModel
 import com.donggukthon.team5.util.binding.BindingDialogFragment
 
@@ -24,7 +26,7 @@ class FireplaceRecordDialogFragment: BindingDialogFragment<FragmentFireplaceReco
 
         initClearFocus(view)
         initMakeRecordContent()
-
+        initSendBurnPage()
     }
 
     private fun initClearFocus(view: View) {
@@ -37,6 +39,13 @@ class FireplaceRecordDialogFragment: BindingDialogFragment<FragmentFireplaceReco
                 }
             }
             return@setOnTouchListener false
+        }
+    }
+
+    private fun initSendBurnPage() {
+        binding.btnFireplaceRecordCheck.setOnClickListener {
+            val intent = Intent(requireActivity(), FireplaceBurnActivity::class.java)
+            startActivity(intent)
         }
     }
 
