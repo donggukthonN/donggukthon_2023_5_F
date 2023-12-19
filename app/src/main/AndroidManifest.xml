@@ -28,7 +28,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".presentation.tree.TreeActivityRecord"
+            android:name=".presentation.tree.TreeRecordActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".presentation.fireplace.FireplaceRecordActivity"
             android:exported="true"
             android:screenOrientation="portrait">
 

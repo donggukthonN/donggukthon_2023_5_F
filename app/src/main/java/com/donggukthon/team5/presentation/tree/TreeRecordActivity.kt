@@ -7,7 +7,7 @@ import com.donggukthon.team5.databinding.ActivityTreeRecordBinding
 import com.donggukthon.team5.presentation.tree.record.TreeRecordDialogHintFragment
 import com.donggukthon.team5.util.binding.BindingActivity
 
-class TreeActivityRecord : BindingActivity<ActivityTreeRecordBinding>(R.layout.activity_tree_record) {
+class TreeRecordActivity : BindingActivity<ActivityTreeRecordBinding>(R.layout.activity_tree_record) {
 
     private val viewModel by viewModels<TreeViewModel>()
     private var recordDialog: TreeRecordDialogHintFragment = TreeRecordDialogHintFragment()
