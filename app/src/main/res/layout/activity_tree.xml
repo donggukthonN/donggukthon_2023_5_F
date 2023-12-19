@@ -15,7 +15,7 @@
             android:layout_height="40dp"
             android:layout_marginTop="6dp"
             android:layout_marginStart="12dp"
-            android:background="@drawable/shape_border_radius10"
+            android:background="@drawable/shape_border_radius10_tree_back"
             android:src="@drawable/ic_tree_back"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
