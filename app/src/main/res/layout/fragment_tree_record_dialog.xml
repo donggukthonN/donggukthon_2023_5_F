@@ -32,6 +32,7 @@
             android:textColorHint="@color/translucent"
             android:gravity="top|left"
             android:background="@android:color/transparent"
+            android:text="@={viewModel.recordContent}"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/iv_tree_record_hint_content"
             app:layout_constraintStart_toStartOf="@id/iv_tree_record_hint_content"
