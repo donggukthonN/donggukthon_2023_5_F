@@ -1,5 +1,6 @@
 package com.donggukthon.team5.presentation.fireplace
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -23,13 +24,14 @@ class FireplaceBurnActivity :
     }
 
     private fun initSetPaperVisible() {
-        //
-        //viewModel.paperVisible.value = true
-        //delay(1000L)
 
+        val intent = Intent(this, FireplaceAfterBurnActivity::class.java)
         Handler(Looper.getMainLooper()).postDelayed({
             viewModel.paperVisible.value = false
-        }, 1000L)
-        //viewModel.paperVisible.value = false
+            startActivity(intent)
+            finish()
+        }, 1500L)
+
+
     }
 }
