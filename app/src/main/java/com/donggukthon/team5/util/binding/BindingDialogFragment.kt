@@ -32,7 +32,7 @@ abstract class BindingDialogFragment<B : ViewDataBinding>(@LayoutRes private val
     override fun onStart() {
         super.onStart()
         dialog?.window?.setLayout(
-            WindowManager.LayoutParams.MATCH_PARENT,
+            WindowManager.LayoutParams.WRAP_CONTENT,
             WindowManager.LayoutParams.WRAP_CONTENT,
         )
         dialog?.window?.setBackgroundDrawableResource(android.R.color.transparent)
