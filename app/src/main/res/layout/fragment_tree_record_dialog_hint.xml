@@ -22,30 +22,42 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
             android:layout_marginTop="31dp"
             android:layout_marginHorizontal="18dp"
-            android:layout_marginBottom="263dp"
-            android:hint="@string/tree_record_hint"
-            android:textColorHint="@color/translucent"
-            android:gravity="top|left"
-            android:background="@android:color/transparent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/iv_tree_record_hint_content"
+            android:textAppearance="@style/TextAppearance.Guide"
+            android:text="@string/dialog_tree_hint_content"
+            android:lineSpacingExtra="10dp"
+            app:layout_constraintTop_toTopOf="@id/iv_tree_record_hint_content"
             app:layout_constraintStart_toStartOf="@id/iv_tree_record_hint_content"
-            app:layout_constraintEnd_toEndOf="@id/iv_tree_record_hint_content" />
+            app:layout_constraintEnd_toEndOf="@id/iv_tree_record_hint_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_marginTop="142dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/dialog_tree_hint_content_small"
+            android:textAppearance="@style/TextAppearance.Body"
+            android:textColor="#5C5C5C"
+            app:layout_constraintTop_toTopOf="@id/iv_tree_record_hint_content"
+            app:layout_constraintStart_toStartOf="@id/iv_tree_record_hint_content"
+            app:layout_constraintEnd_toEndOf="@id/iv_tree_record_hint_content"/>
 
         <ImageButton
-            android:id="@+id/btn_tree_record_check"
+            android:id="@+id/btn_tree_record"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="43dp"
-            android:src="@drawable/img_tree_record_check"
+            android:src="@drawable/img_tree_record"
             android:padding="0dp"
-            android:visibility="@{viewModel.recordEnabled ? View.VISIBLE : View.INVISIBLE}"
             app:layout_constraintTop_toBottomOf="@id/iv_tree_record_hint_content"
+            app:layout_constraintStart_toStartOf="@id/iv_tree_record_hint_content"
             app:layout_constraintEnd_toEndOf="@id/iv_tree_record_hint_content"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.donggukthon.team5.presentation.tree.TreeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -60,7 +63,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            />
+            android:visibility="@{viewModel.btnVisible ? View.VISIBLE : View.INVISIBLE}"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -76,7 +79,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            />
+            android:visibility="@{viewModel.btnVisible ? View.VISIBLE : View.INVISIBLE}"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
