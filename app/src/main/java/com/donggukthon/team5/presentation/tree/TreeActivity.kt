@@ -1,7 +1,6 @@
 package com.donggukthon.team5.presentation.tree
 
 import android.os.Bundle
-import android.view.View
 import androidx.activity.viewModels
 import com.donggukthon.team5.R
 import com.donggukthon.team5.databinding.ActivityTreeBinding
@@ -30,8 +29,7 @@ class TreeActivity : BindingActivity<ActivityTreeBinding>(R.layout.activity_tree
     private fun initSetRecordDialog() {
         binding.btnTreeDecorate.setOnClickListener {
             recordDialog.show(supportFragmentManager, DIALOG_TAG)
-            binding.btnTreeDecorate.visibility = View.INVISIBLE
-            binding.tvTreePreviousRecord.visibility = View.INVISIBLE
+            treeViewModel.btnVisible.value = false
         }
     }
 

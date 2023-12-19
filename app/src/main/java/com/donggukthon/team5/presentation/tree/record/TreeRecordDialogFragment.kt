@@ -13,7 +13,8 @@ import com.donggukthon.team5.databinding.FragmentTreeRecordDialogBinding
 import com.donggukthon.team5.presentation.tree.TreeViewModel
 import com.donggukthon.team5.util.binding.BindingDialogFragment
 
-class TreeRecordDialogFragment: BindingDialogFragment<FragmentTreeRecordDialogBinding>(R.layout.fragment_tree_record_dialog) {
+class TreeRecordDialogFragment :
+    BindingDialogFragment<FragmentTreeRecordDialogBinding>(R.layout.fragment_tree_record_dialog) {
 
     private val viewModel by viewModels<TreeViewModel>()
 
@@ -42,7 +43,8 @@ class TreeRecordDialogFragment: BindingDialogFragment<FragmentTreeRecordDialogBi
 
 
     private fun hideKeyboard(view: View) {
-        val imm = requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        val imm =
+            requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
 

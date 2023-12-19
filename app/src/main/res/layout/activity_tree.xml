@@ -196,6 +196,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_tree_decorate"
+            invisibility="@{viewModel.btnVisible}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="11dp"
@@ -210,6 +211,7 @@
 
         <TextView
             android:id="@+id/tv_tree_previous_record"
+            invisibility="@{viewModel.btnVisible}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="36dp"
