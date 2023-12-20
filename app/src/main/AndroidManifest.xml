@@ -64,6 +64,12 @@
             android:name=".presentation.fireplace.FireplaceGetPresentActivity"
             android:exported="false"
             android:screenOrientation="portrait"/>
+        <activity
+            android:name=".presentation.tree.pastrecord.TreePastRecordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+
+        </activity>
     </application>
 
 </manifest>
