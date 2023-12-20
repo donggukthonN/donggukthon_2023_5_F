@@ -1,16 +1,16 @@
 package com.donggukthon.team5.data.repository
 
+import com.donggukthon.team5.data.datasource.MemoDataSource
 import com.donggukthon.team5.data.model.request.RequestMemoDto
-import com.donggukthon.team5.data.service.MemoService
 import com.donggukthon.team5.domain.repository.MemoRepository
 import javax.inject.Inject
 
 class MemoRepositoryImpl @Inject constructor(
-    private val memoService: MemoService
+    private val memoDataSource: MemoDataSource
 ) : MemoRepository {
     override suspend fun postMemo(treeId: Int, memoType: String, memo: String): Result<Int> =
         kotlin.runCatching {
-            memoService.postMemo(
+            memoDataSource.postMemo(
                 RequestMemoDto(
                     treeId = treeId,
                     memoType = memoType,

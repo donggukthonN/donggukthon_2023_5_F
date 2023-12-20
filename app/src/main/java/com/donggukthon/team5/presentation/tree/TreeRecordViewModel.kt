@@ -54,19 +54,17 @@ class TreeRecordViewModel @Inject constructor(
     fun postMemo() {
         viewModelScope.launch {
             _memoState.value = UiState.Loading
-            recordContent.value?.let {
-                memoRepository.postMemo(
-                    treeId = TREE_ID,
-                    memoType = GOOD,
-                    memo = it
-                )
-                    .onSuccess { ornamentId ->
-                        _memoState.value = UiState.Success(ornamentId)
-                    }
-                    .onFailure { exception: Throwable ->
-                        _memoState.value = UiState.Error(exception.message)
-                    }
-            }
+            memoRepository.postMemo(
+                treeId = TREE_ID,
+                memoType = GOOD,
+                memo = recordContent.value ?: ""
+            )
+                .onSuccess { ornamentId ->
+                    _memoState.value = UiState.Success(ornamentId)
+                }
+                .onFailure { exception: Throwable ->
+                    _memoState.value = UiState.Error(exception.message)
+                }
         }
     }
 
