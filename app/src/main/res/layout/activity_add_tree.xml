@@ -46,7 +46,6 @@
 
         <ImageView
             android:id="@+id/iv_add_tree_light_bulb"
-            invisibility="@{viewModel.mockOrnamentOverviewList[3]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
@@ -57,7 +56,6 @@
 
         <ImageView
             android:id="@+id/iv_add_tree_ball1"
-            invisibility="@{viewModel.mockOrnamentOverviewList[0]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="105dp"
@@ -68,7 +66,6 @@
 
         <ImageView
             android:id="@+id/iv_add_tree_hat"
-            invisibility="@{viewModel.mockOrnamentOverviewList[1]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="-8dp"
@@ -79,7 +76,6 @@
 
         <ImageView
             android:id="@+id/iv_add_tree_ball2"
-            invisibility="@{viewModel.mockOrnamentOverviewList[2]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
@@ -89,7 +85,6 @@
 
         <ImageView
             android:id="@+id/iv_add_tree_ball3"
-            invisibility="@{viewModel.mockOrnamentOverviewList[4]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="-4dp"
@@ -99,7 +94,6 @@
 
         <ImageView
             android:id="@+id/iv_add_tree_cookie"
-            invisibility="@{viewModel.mockOrnamentOverviewList[5]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="13dp"
@@ -110,7 +104,6 @@
 
         <ImageView
             android:id="@+id/iv_add_tree_ball4"
-            invisibility="@{viewModel.mockOrnamentOverviewList[6]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -121,7 +114,6 @@
 
         <ImageView
             android:id="@+id/iv_add_tree_ball5"
-            invisibility="@{viewModel.mockOrnamentOverviewList[7]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="-4dp"
@@ -132,7 +124,6 @@
 
         <ImageView
             android:id="@+id/iv_add_tree_socks"
-            invisibility="@{viewModel.mockOrnamentOverviewList[8]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="29dp"
@@ -143,7 +134,6 @@
 
         <ImageView
             android:id="@+id/iv_add_tree_ball6"
-            invisibility="@{viewModel.mockOrnamentOverviewList[9]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="13dp"
@@ -154,7 +144,6 @@
 
         <ImageView
             android:id="@+id/iv_add_tree_candy"
-            invisibility="@{viewModel.mockOrnamentOverviewList[11]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="63dp"
@@ -164,7 +153,6 @@
 
         <ImageView
             android:id="@+id/iv_add_tree_ball7"
-            invisibility="@{viewModel.mockOrnamentOverviewList[10]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="-12dp"
@@ -175,7 +163,6 @@
 
         <ImageView
             android:id="@+id/iv_add_tree_ball8"
-            invisibility="@{viewModel.mockOrnamentOverviewList[12]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="11dp"
@@ -185,7 +172,6 @@
 
         <ImageView
             android:id="@+id/iv_add_tree_ball9"
-            invisibility="@{viewModel.mockOrnamentOverviewList[13]}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="27dp"
