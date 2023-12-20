@@ -14,33 +14,14 @@
         android:id="@+id/carousel_item_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:foreground="?attr/selectableItemBackground"
-        app:shapeAppearance="?attr/shapeAppearanceCornerExtraLarge"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <!--            <ImageView-->
-        <!--                android:id="@+id/carousel_layout_view"-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:scaleType="centerCrop"-->
-        <!--                app:srcCompat="@mipmap/ic_launcher" />-->
-
-
-
-        <!--            <include-->
-        <!--                android:id="@+id/carousel_layout_view"-->
-        <!--                layout="@layout/item_tree_past_record"-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="wrap_content"/>-->
+        android:foreground="?attr/selectableItemBackground">
 
         <LinearLayout
             android:id="@+id/carousel_layout_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            >
+            android:layout_marginHorizontal="40dp">
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
@@ -80,13 +61,5 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
 
-
-
-        <!--            <layout-->
-        <!--                android:id="@+id/carousel_layout_view"-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:scaleType="centerCrop"-->
-        <!--                app:srcCompat="@mipmap/ic_launcher" />-->
     </com.google.android.material.carousel.MaskableFrameLayout>
 </layout>

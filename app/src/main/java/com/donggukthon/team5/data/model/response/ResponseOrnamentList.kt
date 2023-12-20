@@ -22,7 +22,7 @@ data class ResponseOrnamentList (
     )
 
     fun getOrnamentList() = data.map { data ->
-        OrnamentList(
+        OrnamentList.OrnamentListData(
             ornamentId = data.ornamentId,
             isGoodMemory = data.isGoodMemory,
             memory = data.memory

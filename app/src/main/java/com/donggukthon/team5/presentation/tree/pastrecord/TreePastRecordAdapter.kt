@@ -6,13 +6,12 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.donggukthon.team5.databinding.ActivityTreePastRecordBinding
 import com.donggukthon.team5.databinding.ItemTreePastRecordBinding
-import com.donggukthon.team5.domain.model.GoodMemory
+import com.donggukthon.team5.domain.model.OrnamentList
 import com.donggukthon.team5.util.ItemDiffCallback
 
-class TreePastRecordAdapter(context: Context): ListAdapter<GoodMemory, TreePastRecordAdapter.TreePastRecordViewHolder>(
-    ItemDiffCallback<GoodMemory>(
+class TreePastRecordAdapter(context: Context): ListAdapter<OrnamentList.OrnamentListData, TreePastRecordAdapter.TreePastRecordViewHolder>(
+    ItemDiffCallback<OrnamentList.OrnamentListData>(
         onItemsTheSame = { old, new -> old == new },
         onContentsTheSame = { old, new -> old == new }
     )
@@ -21,24 +20,14 @@ class TreePastRecordAdapter(context: Context): ListAdapter<GoodMemory, TreePastR
     private val inflater by lazy { LayoutInflater.from(context) }
     inner class TreePastRecordViewHolder(private val binding: ItemTreePastRecordBinding) : RecyclerView.ViewHolder(binding.root){
 
-        //var carouselImageView : ImageView
-        var carouselLayout : LinearLayout
+        private var carouselLayout : LinearLayout = binding.carouselLayoutView
 
 
         init {
-            //carouselImageView = binding.carouselImageView
-            carouselLayout = binding.carouselLayoutView
-
-            binding.root.setOnClickListener {
-                onBind(currentList[adapterPosition])
-            }
-
-            fun onBind(data: GoodMemory) {
-                binding.tvTreePastRecordContent.text = data.memory
-            }
+            carouselLayout.dividerPadding = 30
         }
 
-        fun onBind(data: GoodMemory) {
+        fun onBind(data: OrnamentList.OrnamentListData) {
             binding.tvTreePastRecordContent.text = data.memory
         }
 
@@ -51,14 +40,8 @@ class TreePastRecordAdapter(context: Context): ListAdapter<GoodMemory, TreePastR
         return viewHolder
     }
 
-//    override fun getItemCount(): Int {
-//        return imageRes.size
-//    }
-
     override fun onBindViewHolder(holder: TreePastRecordViewHolder, position: Int) {
-        //holder.carouselImageView.setImageResource(imageRes[position])
-
         val item = currentList[position]
-        holder.onBind(item as GoodMemory)
+        holder.onBind(item as OrnamentList.OrnamentListData)
     }
 }
