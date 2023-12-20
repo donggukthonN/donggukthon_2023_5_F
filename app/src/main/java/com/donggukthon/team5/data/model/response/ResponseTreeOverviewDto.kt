@@ -15,7 +15,7 @@ data class ResponseTreeOverviewDto(
     data class Data(
         @SerialName("treeId")
         val treeId: Int,
-        @SerialName("ornamentOverviewList")
+        @SerialName("ornamentOverViewList")
         val ornamentOverviewList: List<Boolean>
     )
 

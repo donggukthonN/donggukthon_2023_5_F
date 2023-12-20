@@ -2,6 +2,7 @@ package com.donggukthon.team5.presentation.addtree
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import androidx.activity.viewModels
 import androidx.lifecycle.flowWithLifecycle
@@ -14,11 +15,13 @@ import com.donggukthon.team5.presentation.treedetail.TreeDetailActivity
 import com.donggukthon.team5.util.UiState
 import com.donggukthon.team5.util.binding.BindingActivity
 import com.donggukthon.team5.util.extension.setInvisibility
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class AddTreeActivity : BindingActivity<ActivityAddTreeBinding>(R.layout.activity_add_tree) {
     private val addTreeViewModel by viewModels<AddTreeViewModel>()
     private lateinit var ornamentView: ImageView
@@ -64,27 +67,12 @@ class AddTreeActivity : BindingActivity<ActivityAddTreeBinding>(R.layout.activit
                         ivAddTreeBall9.setInvisibility(uiState.data.ornamentOverviewList[13])
                     }
 
-                    ornamentView = when (addTreeViewModel.ornamentId.value) {
-                        0 -> binding.ivAddTreeBall1
-                        1 -> binding.ivAddTreeHat
-                        2 -> binding.ivAddTreeBall2
-                        3 -> binding.ivAddTreeLightBulb
-                        4 -> binding.ivAddTreeBall3
-                        5 -> binding.ivAddTreeCookie
-                        6 -> binding.ivAddTreeBall5
-                        7 -> binding.ivAddTreeBall4
-                        8 -> binding.ivAddTreeSocks
-                        9 -> binding.ivAddTreeBall6
-                        10 -> binding.ivAddTreeBall7
-                        11 -> binding.ivAddTreeCandy
-                        12 -> binding.ivAddTreeBall8
-                        else -> binding.ivAddTreeBall9
-                    }
+                    Log.e("ㅋㅋ", "돌아가나요???")
 
                     ornamentView.setInvisibility(false)
                 }
 
-                else -> Unit
+                else -> Log.e("ㅋㅋ", uiState.toString())
             }
         }.launchIn(lifecycleScope)
     }
@@ -101,17 +89,39 @@ class AddTreeActivity : BindingActivity<ActivityAddTreeBinding>(R.layout.activit
 
     private fun initView() {
         val drawableResId = when (addTreeViewModel.ornamentId.value) {
+            1 -> R.drawable.ic_tree_detail_hat
             2 -> R.drawable.ic_tree_detail_ball2
+            3 -> R.drawable.ic_tree_detail_light_bulb
             4 -> R.drawable.ic_tree_detail_ball3
+            5 -> R.drawable.ic_tree_detail_cookie
             6 -> R.drawable.ic_tree_detail_ball4
             7 -> R.drawable.ic_tree_detail_ball5
+            8 -> R.drawable.ic_tree_detail_socks
             9 -> R.drawable.ic_tree_detail_ball6
             10 -> R.drawable.ic_tree_detail_ball7
+            11 -> R.drawable.ic_tree_detail_candy
             12 -> R.drawable.ic_tree_detail_ball8
             13 -> R.drawable.ic_tree_detail_ball9
             else -> R.drawable.ic_tree_detail_ball1
         }
 
         binding.ivAddTreeAdd.setImageResource(drawableResId)
+
+        ornamentView = when (addTreeViewModel.ornamentId.value) {
+            0 -> binding.ivAddTreeBall1
+            1 -> binding.ivAddTreeHat
+            2 -> binding.ivAddTreeBall2
+            3 -> binding.ivAddTreeLightBulb
+            4 -> binding.ivAddTreeBall3
+            5 -> binding.ivAddTreeCookie
+            6 -> binding.ivAddTreeBall4
+            7 -> binding.ivAddTreeBall5
+            8 -> binding.ivAddTreeSocks
+            9 -> binding.ivAddTreeBall6
+            10 -> binding.ivAddTreeBall7
+            11 -> binding.ivAddTreeCandy
+            12 -> binding.ivAddTreeBall8
+            else -> binding.ivAddTreeBall9
+        }
     }
 }
