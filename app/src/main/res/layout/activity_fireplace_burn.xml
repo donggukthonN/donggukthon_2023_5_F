@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.donggukthon.team5.presentation.fireplace.FireplaceRecordViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_gradient_background">
+
+        <ImageView
+            android:id="@+id/iv_fireplace_fireplace"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="105dp"
+            android:layout_marginBottom="203dp"
+            android:src="@drawable/img_fireplace_fireplace"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btn_fireplace_paper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginHorizontal="95dp"
+            android:background="@drawable/shape_border_oval_fireplace_paper"
+            app:layout_constraintTop_toBottomOf="@id/iv_fireplace_fireplace"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        
+        <ImageView
+            android:layout_width="99dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="400dp"
+            android:layout_marginHorizontal="138dp"
+            android:src="@drawable/img_fireplace_paper"
+            android:visibility="@{!viewModel.paperVisible ? View.VISIBLE : View.INVISIBLE}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:layout_width="99dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginHorizontal="95dp"
+            android:src="@drawable/img_fireplace_paper"
+            android:visibility="@{viewModel.paperVisible ? View.VISIBLE : View.INVISIBLE}"
+            app:layout_constraintTop_toBottomOf="@id/iv_fireplace_fireplace"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
