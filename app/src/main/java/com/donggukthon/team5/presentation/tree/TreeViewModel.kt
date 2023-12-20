@@ -3,7 +3,8 @@ package com.donggukthon.team5.presentation.tree
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import android.util.Log
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 
 class TreeViewModel : ViewModel() {
     val mockOrnamentOverviewList =
@@ -20,4 +21,7 @@ class TreeViewModel : ViewModel() {
     fun isRecordCheckEnabled() {
         _recordEnabled.value = !recordContent.value.isNullOrEmpty()
     }
+
+    private val _ornamentId = MutableStateFlow<Int>(2)
+    val ornamentId = _ornamentId.asStateFlow()
 }
