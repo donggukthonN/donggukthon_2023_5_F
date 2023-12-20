@@ -10,10 +10,13 @@ import com.donggukthon.team5.presentation.tree.TreeRecordViewModel
 import com.donggukthon.team5.presentation.tree.record.TreeRecordDialogFragment
 import com.donggukthon.team5.util.binding.BindingDialogFragment
 
-class FireplaceRecordDialogHintFragment: BindingDialogFragment<FragmentFireplaceRecordDialogHintBinding>(R.layout.fragment_fireplace_record_dialog_hint) {
+class FireplaceRecordDialogHintFragment(
+    private val clickRecordBtn: () -> Unit
+) : BindingDialogFragment<FragmentFireplaceRecordDialogHintBinding>(R.layout.fragment_fireplace_record_dialog_hint) {
 
     private val viewModel by viewModels<FireplaceRecordViewModel>()
-    private var recordDialog: FireplaceRecordDialogFragment = FireplaceRecordDialogFragment()
+    private var recordDialog: FireplaceRecordDialogFragment =
+        FireplaceRecordDialogFragment(clickRecordBtn)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

@@ -1,6 +1,7 @@
 package com.donggukthon.team5.presentation.tree.pastrecord
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
@@ -16,7 +17,8 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
 @AndroidEntryPoint
-class TreePastRecordActivity: BindingActivity<ActivityTreePastRecordBinding>(R.layout.activity_tree_past_record) {
+class TreePastRecordActivity :
+    BindingActivity<ActivityTreePastRecordBinding>(R.layout.activity_tree_past_record) {
 
     private val viewModel by viewModels<TreePastRecordViewModel>()
 
@@ -35,7 +37,8 @@ class TreePastRecordActivity: BindingActivity<ActivityTreePastRecordBinding>(R.l
     private fun initMakePastRecordCarousel() {
         _pastRecordAdapter = TreePastRecordAdapter(this)
         binding.rcvTreePastRecord.adapter = pastRecordAdapter
-        binding.rcvTreePastRecord.layoutManager = CarouselLayoutManager(MultiBrowseCarouselStrategy())
+        binding.rcvTreePastRecord.layoutManager =
+            CarouselLayoutManager(MultiBrowseCarouselStrategy())
 //        viewModel.mockPastRecordList.observe(this) {
 //            pastRecordAdapter.submitList(it)
 //        }
@@ -46,6 +49,7 @@ class TreePastRecordActivity: BindingActivity<ActivityTreePastRecordBinding>(R.l
                 is UiState.Success -> {
                     pastRecordAdapter.submitList(uiState.data)
                 }
+
                 else -> {}
             }
         }.launchIn(lifecycleScope)
