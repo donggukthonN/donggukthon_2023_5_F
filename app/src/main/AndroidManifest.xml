@@ -58,7 +58,7 @@
         </activity>
         <activity
             android:name=".presentation.fireplace.FireplaceRecordActivity"
-            android:exported="false"
+            android:exported="true"
             android:screenOrientation="portrait">
 
         </activity>
@@ -76,6 +76,11 @@
             android:screenOrientation="portrait"/>
         <activity
             android:name=".presentation.tree.pastrecord.TreePastRecordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".presentation.fireplace.FireplaceDecoPresentActivity"
             android:exported="false"
             android:screenOrientation="portrait">
         </activity>
