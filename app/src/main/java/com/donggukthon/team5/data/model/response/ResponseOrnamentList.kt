@@ -1,6 +1,6 @@
 package com.donggukthon.team5.data.model.response
 
-import com.donggukthon.team5.domain.model.GoodMemory
+import com.donggukthon.team5.domain.model.OrnamentList
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -22,7 +22,7 @@ data class ResponseOrnamentList (
     )
 
     fun getOrnamentList() = data.map { data ->
-        GoodMemory(
+        OrnamentList(
             ornamentId = data.ornamentId,
             isGoodMemory = data.isGoodMemory,
             memory = data.memory
