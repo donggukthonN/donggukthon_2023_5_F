@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import com.donggukthon.team5.R
 import com.donggukthon.team5.databinding.ActivityAddTreeBinding
-import com.donggukthon.team5.presentation.tree.TreeActivity.Companion.ORNAMENT_ID
+import com.donggukthon.team5.presentation.tree.TreeRecordActivity.Companion.ORNAMENT_ID
 import com.donggukthon.team5.presentation.treedetail.TreeDetailActivity
 import com.donggukthon.team5.util.binding.BindingActivity
 

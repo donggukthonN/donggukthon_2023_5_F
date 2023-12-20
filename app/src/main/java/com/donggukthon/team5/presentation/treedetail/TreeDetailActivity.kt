@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import com.donggukthon.team5.R
 import com.donggukthon.team5.databinding.ActivityTreeDetailBinding
-import com.donggukthon.team5.presentation.tree.TreeActivity
+import com.donggukthon.team5.presentation.tree.TreeRecordActivity
 import com.donggukthon.team5.util.binding.BindingActivity
 
 class TreeDetailActivity :
@@ -26,7 +26,7 @@ class TreeDetailActivity :
     }
 
     private fun moveToTree() {
-        Intent(this@TreeDetailActivity, TreeActivity::class.java).apply {
+        Intent(this@TreeDetailActivity, TreeRecordActivity::class.java).apply {
             startActivity(this)
             finish()
         }
