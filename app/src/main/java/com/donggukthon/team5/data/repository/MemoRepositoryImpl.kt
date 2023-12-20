@@ -16,6 +16,6 @@ class MemoRepositoryImpl @Inject constructor(
                     memoType = memoType,
                     memo = memo
                 )
-            ).data.ornamentId
+            ).data
         }
 }

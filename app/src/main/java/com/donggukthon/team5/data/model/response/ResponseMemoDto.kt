@@ -8,11 +8,5 @@ data class ResponseMemoDto(
     @SerialName("message")
     val message: String,
     @SerialName("data")
-    val data: Data
-) {
-    @Serializable
-    data class Data(
-        @SerialName("ornamentId")
-        val ornamentId: Int
-    )
-}
+    val data: Int
+)
