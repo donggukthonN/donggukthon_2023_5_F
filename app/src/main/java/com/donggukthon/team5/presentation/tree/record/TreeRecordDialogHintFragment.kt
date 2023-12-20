@@ -9,14 +9,13 @@ import com.donggukthon.team5.presentation.tree.TreeRecordViewModel
 import com.donggukthon.team5.util.binding.BindingDialogFragment
 
 class TreeRecordDialogHintFragment(
-    private val clickRecordBtn: () -> Unit = {},
-    private val onDialogClosed: () -> Unit
+    private val clickRecordBtn: () -> Unit = {}
 ) :
     BindingDialogFragment<FragmentTreeRecordDialogHintBinding>(R.layout.fragment_tree_record_dialog_hint) {
 
     private val viewModel by viewModels<TreeRecordViewModel>()
     private var recordDialog: TreeRecordDialogFragment =
-        TreeRecordDialogFragment(clickRecordBtn, onDialogClosed)
+        TreeRecordDialogFragment(clickRecordBtn)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -27,7 +26,6 @@ class TreeRecordDialogHintFragment(
     private fun initMakeRecordDialog() {
         binding.btnTreeRecord.setOnClickListener {
             dismiss()
-            clickRecordBtn.invoke()
             recordDialog.show(requireActivity().supportFragmentManager, DIALOG_TAG)
         }
     }

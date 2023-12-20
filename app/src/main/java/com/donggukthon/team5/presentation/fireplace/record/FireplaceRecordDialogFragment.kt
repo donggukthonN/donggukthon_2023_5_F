@@ -1,7 +1,6 @@
 package com.donggukthon.team5.presentation.fireplace.record
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
@@ -11,11 +10,14 @@ import android.widget.EditText
 import androidx.fragment.app.viewModels
 import com.donggukthon.team5.R
 import com.donggukthon.team5.databinding.FragmentFireplaceRecordDialogBinding
-import com.donggukthon.team5.presentation.fireplace.FireplaceBurnActivity
 import com.donggukthon.team5.presentation.fireplace.FireplaceRecordViewModel
 import com.donggukthon.team5.util.binding.BindingDialogFragment
+import dagger.hilt.android.AndroidEntryPoint
 
-class FireplaceRecordDialogFragment: BindingDialogFragment<FragmentFireplaceRecordDialogBinding>(R.layout.fragment_fireplace_record_dialog) {
+@AndroidEntryPoint
+class FireplaceRecordDialogFragment(
+    private val clickRecordBtn: () -> Unit
+) : BindingDialogFragment<FragmentFireplaceRecordDialogBinding>(R.layout.fragment_fireplace_record_dialog) {
 
     private val viewModel by viewModels<FireplaceRecordViewModel>()
 
@@ -26,7 +28,7 @@ class FireplaceRecordDialogFragment: BindingDialogFragment<FragmentFireplaceReco
 
         initClearFocus(view)
         initMakeRecordContent()
-        initSendBurnPage()
+        addListeners()
     }
 
     private fun initClearFocus(view: View) {
@@ -42,16 +44,17 @@ class FireplaceRecordDialogFragment: BindingDialogFragment<FragmentFireplaceReco
         }
     }
 
-    private fun initSendBurnPage() {
+    private fun addListeners() {
         binding.btnFireplaceRecordCheck.setOnClickListener {
-            val intent = Intent(requireActivity(), FireplaceBurnActivity::class.java)
-            startActivity(intent)
+            clickRecordBtn.invoke()
+            dismiss()
         }
     }
 
 
     private fun hideKeyboard(view: View) {
-        val imm = requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        val imm =
+            requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
 
