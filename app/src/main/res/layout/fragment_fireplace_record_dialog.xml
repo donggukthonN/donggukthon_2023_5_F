@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.donggukthon.team5.presentation.tree.TreeRecordViewModel" />
+            type="com.donggukthon.team5.presentation.fireplace.FireplaceRecordViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,16 +14,16 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/iv_tree_record_hint_content"
+            android:id="@+id/iv_fireplace_record_hint_content"
             android:layout_width="280dp"
             android:layout_height="390dp"
-            android:src="@drawable/shape_border_radius10_tree_modal"
+            android:src="@drawable/shape_border_radius10_fireplace_modal"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
         <EditText
-            android:id="@+id/edt_tree_record_content"
+            android:id="@+id/edt_fireplace_record_content"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="31dp"
@@ -35,20 +35,20 @@
             android:background="@android:color/transparent"
             android:text="@={viewModel.recordContent}"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/iv_tree_record_hint_content"
-            app:layout_constraintStart_toStartOf="@id/iv_tree_record_hint_content"
-            app:layout_constraintEnd_toEndOf="@id/iv_tree_record_hint_content" />
+            app:layout_constraintBottom_toBottomOf="@id/iv_fireplace_record_hint_content"
+            app:layout_constraintStart_toStartOf="@id/iv_fireplace_record_hint_content"
+            app:layout_constraintEnd_toEndOf="@id/iv_fireplace_record_hint_content" />
 
         <ImageButton
-            android:id="@+id/btn_tree_record_check"
+            android:id="@+id/btn_fireplace_record_check"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="43dp"
-            android:src="@drawable/img_tree_record_check"
+            android:src="@drawable/img_fireplace_check"
             android:padding="0dp"
             android:visibility="@{viewModel.recordEnabled ? View.VISIBLE : View.INVISIBLE}"
-            app:layout_constraintTop_toBottomOf="@id/iv_tree_record_hint_content"
-            app:layout_constraintEnd_toEndOf="@id/iv_tree_record_hint_content"/>
+            app:layout_constraintTop_toBottomOf="@id/iv_fireplace_record_hint_content"
+            app:layout_constraintEnd_toEndOf="@id/iv_fireplace_record_hint_content"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

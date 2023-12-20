@@ -6,7 +6,7 @@ import androidx.activity.viewModels
 import com.donggukthon.team5.R
 import com.donggukthon.team5.databinding.ActivityHomeBinding
 import com.donggukthon.team5.presentation.fireplace.FirePlaceActivity
-import com.donggukthon.team5.presentation.tree.TreeActivity
+import com.donggukthon.team5.presentation.tree.TreeRecordActivity
 import com.donggukthon.team5.util.binding.BindingActivity
 
 class HomeActivity : BindingActivity<ActivityHomeBinding>(R.layout.activity_home) {
@@ -38,7 +38,7 @@ class HomeActivity : BindingActivity<ActivityHomeBinding>(R.layout.activity_home
     }
 
     private fun moveToTree() {
-        Intent(this@HomeActivity, TreeActivity::class.java).apply {
+        Intent(this@HomeActivity, TreeRecordActivity::class.java).apply {
             startActivity(this)
         }
     }

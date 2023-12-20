@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.donggukthon.team5.presentation.tree.TreeViewModel" />
+            type="com.donggukthon.team5.presentation.tree.TreeRecordViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

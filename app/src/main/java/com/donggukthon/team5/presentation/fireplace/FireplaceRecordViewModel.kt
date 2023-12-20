@@ -1,13 +1,10 @@
-package com.donggukthon.team5.presentation.tree
+package com.donggukthon.team5.presentation.fireplace
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import android.util.Log
 
-class TreeViewModel : ViewModel() {
-    val mockOrnamentOverviewList =
-        listOf(true, true, false, true, true, false, true, true, false, false, true, true, true)
+class FireplaceRecordViewModel: ViewModel() {
 
     val btnVisible: MutableLiveData<Boolean> = MutableLiveData(true)
 
@@ -16,6 +13,9 @@ class TreeViewModel : ViewModel() {
     private val _recordEnabled: MutableLiveData<Boolean> = MutableLiveData()
     val recordEnabled: LiveData<Boolean>
         get() = _recordEnabled
+
+    val paperVisible: MutableLiveData<Boolean> = MutableLiveData(true)
+    val presentVisible: MutableLiveData<Boolean> = MutableLiveData(true)
 
     fun isRecordCheckEnabled() {
         _recordEnabled.value = !recordContent.value.isNullOrEmpty()
