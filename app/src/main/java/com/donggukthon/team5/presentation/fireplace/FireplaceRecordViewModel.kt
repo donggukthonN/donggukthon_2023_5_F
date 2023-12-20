@@ -15,6 +15,7 @@ class FireplaceRecordViewModel: ViewModel() {
         get() = _recordEnabled
 
     val paperVisible: MutableLiveData<Boolean> = MutableLiveData(true)
+    val presentVisible: MutableLiveData<Boolean> = MutableLiveData(true)
 
     fun isRecordCheckEnabled() {
         _recordEnabled.value = !recordContent.value.isNullOrEmpty()

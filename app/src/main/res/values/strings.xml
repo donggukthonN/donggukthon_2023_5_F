@@ -23,4 +23,5 @@
     <string name="fireplace_record_content">잊고싶은 기억,\n후회되는 기억을\n적어보세요</string>
     <string name="fireplace_record_content_hint">ex)\n자격증 시험 전 날\n유투브를 보느라 늦게 자서\n시험 시간에 늦은 것.</string>
     <string name="fireplace_after_burn_content">나쁜 기억을 태워버렸어요!\n안좋은 기억은 잊고\n좋은 기억만 남기를 바래요:)</string>
+    <string name="fireplace_get_present_fireplace">선물이 도착했어요!</string>
 </resources>

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.MotionEvent
 import com.donggukthon.team5.R
 import com.donggukthon.team5.databinding.ActivityFireplaceAfterBurnBinding
 import com.donggukthon.team5.util.binding.BindingActivity
@@ -13,13 +14,17 @@ class FireplaceAfterBurnActivity: BindingActivity<ActivityFireplaceAfterBurnBind
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //initGoNextPage()
     }
 
-//    private fun initGoNextPage() {
-//        val intent = Intent(this, )
-//        Handler(Looper.getMainLooper()).postDelayed({
-//            viewModel.paperVisible.value = false
-//        }, 1000L)
-//    }
+
+    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
+        initGoNextPage()
+        return super.dispatchTouchEvent(ev)
+    }
+
+    private fun initGoNextPage() {
+        val intent = Intent(this, FireplaceGetPresentActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
 }
