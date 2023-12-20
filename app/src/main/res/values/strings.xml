@@ -11,6 +11,9 @@
     <string name="tree_decorate">장식하기</string>
     <string name="tree_previous_record"><u>이전 기록 보기</u></string>
 
+    <!-- tree detail -->
+    <string name="tree_detail_tree">%s님의 트리</string>
+
     <!-- fire place -->
     <string name="fire_place_not_burning_yet">아직 태우지 않은 기억이 있어요!</string>
     <string name="fire_place_firewood">장작넣기</string>

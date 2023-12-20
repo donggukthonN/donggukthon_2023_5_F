@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.donggukthon.team5.presentation.treedetail.TreeDetailViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_gradient_background"
+        tools:context=".presentation.treedetail.TreeDetailActivity">
+
+        <ImageView
+            android:id="@+id/iv_tree_detail_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_return"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_tree_detail_fire_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="186dp"
+            android:src="@drawable/ic_tree_detail_fire_place"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_tree_detail_tree" />
+
+
+        <ImageView
+            android:id="@+id/iv_tree_detail_tree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tree_detail_tree"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_tree_detail_light_bulb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="109dp"
+            android:src="@drawable/ic_tree_detail_light_bulb"
+            app:layout_constraintStart_toStartOf="@+id/iv_tree_detail_tree"
+            app:layout_constraintTop_toTopOf="@+id/iv_tree_detail_tree" />
+
+        <ImageView
+            android:id="@+id/iv_tree_detail_ball1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="118dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/ic_tree_detail_ball1"
+            app:layout_constraintStart_toStartOf="@+id/iv_tree_detail_light_bulb"
+            app:layout_constraintTop_toTopOf="@+id/iv_tree_detail_light_bulb" />
+
+        <ImageView
+            android:id="@+id/iv_tree_detail_hat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37dp"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/ic_tree_detail_hat"
+            app:layout_constraintEnd_toEndOf="@+id/iv_tree_detail_ball1"
+            app:layout_constraintTop_toTopOf="@+id/iv_tree_detail_ball1" />
+
+        <ImageView
+            android:id="@+id/iv_tree_detail_ball2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="42dp"
+            android:src="@drawable/ic_tree_detail_ball2"
+            app:layout_constraintStart_toEndOf="@+id/iv_tree_detail_ball1"
+            app:layout_constraintTop_toTopOf="@+id/iv_tree_detail_ball1" />
+
+        <ImageView
+            android:id="@+id/iv_tree_detail_ball3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/ic_tree_detail_ball3"
+            app:layout_constraintStart_toStartOf="@+id/iv_tree_detail_hat"
+            app:layout_constraintTop_toBottomOf="@+id/iv_tree_detail_hat" />
+
+        <ImageView
+            android:id="@+id/iv_tree_detail_cookie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="17dp"
+            android:src="@drawable/ic_tree_detail_cookie"
+            app:layout_constraintStart_toEndOf="@+id/iv_tree_detail_ball3"
+            app:layout_constraintTop_toBottomOf="@+id/iv_tree_detail_ball2" />
+
+        <ImageView
+            android:id="@+id/iv_tree_detail_ball4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="18dp"
+            android:src="@drawable/ic_tree_detail_ball4"
+            app:layout_constraintEnd_toStartOf="@+id/iv_tree_detail_ball3"
+            app:layout_constraintTop_toBottomOf="@+id/iv_tree_detail_ball3" />
+
+        <ImageView
+            android:id="@+id/iv_tree_detail_ball5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-1dp"
+            android:layout_marginTop="-3dp"
+            android:src="@drawable/ic_tree_detail_ball5"
+            app:layout_constraintStart_toStartOf="@+id/iv_tree_detail_cookie"
+            app:layout_constraintTop_toBottomOf="@+id/iv_tree_detail_cookie" />
+
+        <ImageView
+            android:id="@+id/iv_tree_detail_socks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-9dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/ic_tree_detail_socks"
+            app:layout_constraintStart_toEndOf="@+id/iv_tree_detail_ball4"
+            app:layout_constraintTop_toBottomOf="@+id/iv_tree_detail_ball5" />
+
+        <ImageView
+            android:id="@+id/iv_tree_detail_ball6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_tree_ball6"
+            app:layout_constraintStart_toEndOf="@+id/iv_tree_detail_ball5"
+            app:layout_constraintTop_toBottomOf="@+id/iv_tree_detail_ball5" />
+
+        <ImageView
+            android:id="@+id/iv_tree_detail_ball7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="7dp"
+            android:src="@drawable/ic_tree_detail_ball7"
+            app:layout_constraintEnd_toStartOf="@+id/iv_tree_detail_ball6"
+            app:layout_constraintTop_toBottomOf="@+id/iv_tree_detail_ball6" />
+
+        <ImageView
+            android:id="@+id/iv_tree_detail_candy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="7dp"
+            android:src="@drawable/ic_tree_detail_candy"
+            app:layout_constraintEnd_toEndOf="@+id/iv_tree_detail_ball4"
+            app:layout_constraintTop_toBottomOf="@+id/iv_tree_detail_ball4" />
+
+        <ImageView
+            android:id="@+id/iv_tree_detail_ball8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-9dp"
+            android:layout_marginTop="49dp"
+            android:src="@drawable/ic_tree_detail_ball8"
+            app:layout_constraintStart_toEndOf="@+id/iv_tree_detail_candy"
+            app:layout_constraintTop_toTopOf="@+id/iv_tree_detail_candy" />
+
+        <ImageView
+            android:id="@+id/iv_tree_detail_ball9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_tree_detail_ball9"
+            app:layout_constraintStart_toEndOf="@+id/iv_tree_detail_ball7"
+            app:layout_constraintTop_toBottomOf="@+id/iv_tree_detail_ball7" />
+
+        <TextView
+            android:id="@+id/tv_tree_detail_tree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.Body"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/tree_detail_tree" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

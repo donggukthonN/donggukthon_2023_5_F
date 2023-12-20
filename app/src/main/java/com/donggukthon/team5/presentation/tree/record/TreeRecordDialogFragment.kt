@@ -1,6 +1,7 @@
 package com.donggukthon.team5.presentation.tree.record
 
 import android.content.Context
+import android.content.DialogInterface
 import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
@@ -13,7 +14,10 @@ import com.donggukthon.team5.databinding.FragmentTreeRecordDialogBinding
 import com.donggukthon.team5.presentation.tree.TreeRecordViewModel
 import com.donggukthon.team5.util.binding.BindingDialogFragment
 
-class TreeRecordDialogFragment :
+class TreeRecordDialogFragment(
+    private val clickRecordBtn: () -> Unit,
+    private val onDialogClosed: () -> Unit
+) :
     BindingDialogFragment<FragmentTreeRecordDialogBinding>(R.layout.fragment_tree_record_dialog) {
 
     private val viewModel by viewModels<TreeRecordViewModel>()
@@ -25,7 +29,12 @@ class TreeRecordDialogFragment :
 
         initClearFocus(view)
         initMakeRecordContent()
+        addListeners()
+    }
 
+    override fun onDismiss(dialog: DialogInterface) {
+        super.onDismiss(dialog)
+        onDialogClosed.invoke()
     }
 
     private fun initClearFocus(view: View) {
@@ -48,6 +57,11 @@ class TreeRecordDialogFragment :
         imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
 
+    private fun addListeners() {
+        binding.btnTreeRecordCheck.setOnClickListener {
+            dismiss()
+        }
+    }
 
     private fun initMakeRecordContent() {
         viewModel.recordContent.observe(requireActivity()) {
