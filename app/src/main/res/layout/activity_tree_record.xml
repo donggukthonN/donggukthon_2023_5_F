@@ -205,13 +205,14 @@
             android:paddingVertical="15dp"
             android:text="@string/tree_decorate"
             android:textAppearance="@style/TextAppearance.Button1"
-            app:layout_constraintBottom_toTopOf="@+id/tv_tree_previous_record"
-            app:layout_constraintEnd_toEndOf="@+id/tv_tree_previous_record"
-            app:layout_constraintStart_toStartOf="@+id/tv_tree_previous_record" />
+            app:layout_constraintBottom_toTopOf="@+id/btn_tree_previous_record"
+            app:layout_constraintEnd_toEndOf="@+id/btn_tree_previous_record"
+            app:layout_constraintStart_toStartOf="@+id/btn_tree_previous_record" />
 
         <TextView
-            android:id="@+id/tv_tree_previous_record"
+            android:id="@+id/btn_tree_previous_record"
             invisibility="@{viewModel.btnVisible}"
+            android:clickable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="36dp"

@@ -36,7 +36,11 @@
             android:exported="true"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity
@@ -44,21 +48,17 @@
             android:exported="true"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".presentation.tree.TreeRecordActivity"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait">
 
         </activity>
         <activity
             android:name=".presentation.fireplace.FireplaceRecordActivity"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait">
 
         </activity>
@@ -78,7 +78,6 @@
             android:name=".presentation.tree.pastrecord.TreePastRecordActivity"
             android:exported="false"
             android:screenOrientation="portrait">
-
         </activity>
     </application>
 
