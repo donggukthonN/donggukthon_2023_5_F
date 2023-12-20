@@ -2,7 +2,6 @@ package com.donggukthon.team5.presentation.addtree
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.ImageView
 import androidx.activity.viewModels
 import androidx.lifecycle.flowWithLifecycle
@@ -67,12 +66,10 @@ class AddTreeActivity : BindingActivity<ActivityAddTreeBinding>(R.layout.activit
                         ivAddTreeBall9.setInvisibility(uiState.data.ornamentOverviewList[13])
                     }
 
-                    Log.e("ㅋㅋ", "돌아가나요???")
-
                     ornamentView.setInvisibility(false)
                 }
 
-                else -> Log.e("ㅋㅋ", uiState.toString())
+                else -> Unit
             }
         }.launchIn(lifecycleScope)
     }

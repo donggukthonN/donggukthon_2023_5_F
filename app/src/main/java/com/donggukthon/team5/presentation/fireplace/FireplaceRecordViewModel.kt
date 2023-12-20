@@ -34,19 +34,17 @@ class FireplaceRecordViewModel @Inject constructor(
     fun postMemo() {
         viewModelScope.launch {
             _memoState.value = UiState.Loading
-            recordContent.value?.let {
-                memoRepository.postMemo(
-                    treeId = HomeViewModel.TREE_ID,
-                    memoType = BAD,
-                    memo = it
-                )
-                    .onSuccess { ornamentId ->
-                        _memoState.value = UiState.Success(ornamentId)
-                    }
-                    .onFailure { exception: Throwable ->
-                        _memoState.value = UiState.Error(exception.message)
-                    }
-            }
+            memoRepository.postMemo(
+                treeId = HomeViewModel.TREE_ID,
+                memoType = BAD,
+                memo = recordContent.value ?: ""
+            )
+                .onSuccess { ornamentId ->
+                    _memoState.value = UiState.Success(ornamentId)
+                }
+                .onFailure { exception: Throwable ->
+                    _memoState.value = UiState.Error(exception.message)
+                }
         }
     }
 

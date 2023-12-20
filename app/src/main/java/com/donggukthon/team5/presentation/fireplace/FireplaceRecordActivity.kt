@@ -4,13 +4,16 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.flowWithLifecycle
+import androidx.lifecycle.lifecycleScope
 import com.donggukthon.team5.R
 import com.donggukthon.team5.databinding.ActivityFireplaceRecordBinding
 import com.donggukthon.team5.presentation.fireplace.record.FireplaceRecordDialogHintFragment
+import com.donggukthon.team5.presentation.home.HomeActivity
 import com.donggukthon.team5.presentation.tree.TreeRecordActivity.Companion.ORNAMENT_ID
 import com.donggukthon.team5.util.UiState
 import com.donggukthon.team5.util.binding.BindingActivity
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
 @AndroidEntryPoint
@@ -27,6 +30,7 @@ class FireplaceRecordActivity :
         binding.viewModel = viewModel
 
         initSetRecordDialog()
+        addListeners()
         collectData()
     }
 
@@ -34,6 +38,15 @@ class FireplaceRecordActivity :
         binding.btnFireplaceRecord.setOnClickListener {
             recordDialog.show(supportFragmentManager, DIALOG_TAG)
             viewModel.btnVisible.value = false
+        }
+    }
+
+    private fun addListeners() {
+        binding.ivFireplaceHome.setOnClickListener {
+            Intent(this@FireplaceRecordActivity, HomeActivity::class.java).apply {
+                startActivity(this)
+                finish()
+            }
         }
     }
 
@@ -46,7 +59,7 @@ class FireplaceRecordActivity :
 
                 else -> Unit
             }
-        }
+        }.launchIn(lifecycleScope)
     }
 
     private fun moveToFirePlaceBurnActivity(ornamentId: Int) {

@@ -8,6 +8,7 @@ import androidx.lifecycle.lifecycleScope
 import com.donggukthon.team5.R
 import com.donggukthon.team5.databinding.ActivityTreeRecordBinding
 import com.donggukthon.team5.presentation.addtree.AddTreeActivity
+import com.donggukthon.team5.presentation.home.HomeActivity
 import com.donggukthon.team5.presentation.tree.record.TreeRecordDialogHintFragment
 import com.donggukthon.team5.util.UiState
 import com.donggukthon.team5.util.binding.BindingActivity
@@ -36,6 +37,10 @@ class TreeRecordActivity :
 
     private fun addListeners() {
         binding.ivTreeHome.setOnClickListener {
+            Intent(this@TreeRecordActivity, HomeActivity::class.java).apply {
+                startActivity(this)
+                finish()
+            }
             finish()
         }
     }

@@ -8,8 +8,9 @@ import androidx.activity.viewModels
 import com.donggukthon.team5.R
 import com.donggukthon.team5.databinding.ActivityFireplaceBurnBinding
 import com.donggukthon.team5.util.binding.BindingActivity
-import kotlinx.coroutines.delay
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class FireplaceBurnActivity :
     BindingActivity<ActivityFireplaceBurnBinding>(R.layout.activity_fireplace_burn) {
 
