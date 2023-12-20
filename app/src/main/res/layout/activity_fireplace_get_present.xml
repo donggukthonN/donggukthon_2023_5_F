@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.donggukthon.team5.presentation.fireplace.FireplaceRecordViewModel" />
+            type="com.donggukthon.team5.presentation.fireplace.FirePlaceGetPresentViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
